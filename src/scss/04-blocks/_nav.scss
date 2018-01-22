@@ -1,0 +1,17 @@
+.nav {
+	&-link {
+		@include font(main, 14px);
+		text-transform: uppercase;
+		color: $light;
+		padding-bottom: 20px;
+
+		&:hover {
+			border-bottom: 1px solid $red;
+			color: $red;
+		}
+	}
+
+	&-link:not(:last-child) {
+		margin-right: 20px;
+	}
+}
