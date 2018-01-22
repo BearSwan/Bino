@@ -1,0 +1,16 @@
+// First we need to import all libraries. They're not depend from any local settings
+@import './03-core/all';
+
+// Then we import all base items - basic configuration, core variables, variables, mixins,
+// helpers, images (base64), icons (icon font), typography
+@import './01-base/all';
+
+// Import for all re-usable common elements (the most simple blocks, form elements, re-usable patterns
+// and code snippets)
+@import './02-common_elements/all';
+
+// Import for Blocks styles
+@import './04-blocks/all';
+
+// Import for Layout styles (styles for Blocks positioning)
+@import './05-sections/all';
