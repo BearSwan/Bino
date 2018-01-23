@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "newFontNamela";
+	src: url('./newFontNamela.eot');
+	src: url('./newFontNamela.eot?#iefix') format('eot'),
+		url('./newFontNamela.woff2') format('woff2'),
+		url('./newFontNamela.woff') format('woff'),
+		url('./newFontNamela.ttf') format('truetype'),
+		url('./newFontNamela.svg#newFontNamela') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "newFontNamela";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-right {
+		$char: "\E001";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-right {
+	@include icon(arrow-right);
+}

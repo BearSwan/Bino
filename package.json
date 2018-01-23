@@ -11,6 +11,8 @@
   "devDependencies": {
     "browser-sync": "^2.23.3",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-iconfont": "^9.1.0",
+    "gulp-iconfont-css": "^2.1.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-install": "^1.1.0",
     "gulp-minify-css": "^1.2.4",
