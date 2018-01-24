@@ -1,0 +1,17 @@
+// Mixin can be used for consistent touch\hover effects UX on devices and hover action on desktop
+// Reason: effects on :hover stuck on touch, so :action instead should be used for mobile\tablet and :hover for desktop
+// Sample:
+//
+// color: blue;
+// @include on-hover {
+//     color: red;
+// }
+
+/* @mixin on-hover {
+	@include respond-to(desktop) {
+		&:hover {
+			//desktop
+			@content;
+		}
+	}
+} */

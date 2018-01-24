@@ -1,0 +1,37 @@
+/*
+This is simple buttons style.
+*/
+
+@mixin g-buttons (
+	$bg_color: red,
+	$hovered_color: green,
+	$border_color: yellow,
+	$text_color: white
+) {
+	background-color: $bg_color;
+	border-color: $border_color;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	box-shadow: 1px 2px 4.75px 0.25px rgba(0, 0, 0, 0.9); 
+	cursor: pointer;
+	color: $text_color;
+	display: block;
+	padding: 10px 30px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: transform 0.2s, border-color 0.2s;
+	width: auto;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+/* 	@include on-hover {
+		background-color: $hovered_color;
+	} */
+}
+
+.test-button {
+	@include g-buttons (green, black, black);
+}
