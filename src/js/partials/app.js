@@ -1,1 +1,3 @@
-alert("fuck you fucking fuck");
+$(document).ready(function(){
+    $('.b-hero_slider').slick();
+  });
