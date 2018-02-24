@@ -9,9 +9,11 @@ html {
 }
 
 body {
+	@include font(main, 14px);
+
 	font-size: 14px;
 	height: 100%;
- }
+}
 
 .container {
 	padding-right: 20px;

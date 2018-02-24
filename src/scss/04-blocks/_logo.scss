@@ -1,4 +1,4 @@
-.logo {
+.b-logo {
 	@include font(main_bold, 35px);
 
 	display: block;
@@ -6,13 +6,13 @@
 	padding: 5px 15px 5px 0;
 	border: 3px solid $light;
 
-	&-part1 {
-		padding: 5px 15px;
+	&_part1 {
+		padding: 0 15px;
 		background: $light;
 		color: $grey;
 	}
 
-	&-part2 {
+	&_part2 {
 		color: $light; 
 	}
 }

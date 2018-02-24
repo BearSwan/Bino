@@ -1,17 +1,9 @@
-.nav {
-	&-link {
-		@include font(main, 14px);
-		text-transform: uppercase;
-		color: $light;
-		padding-bottom: 20px;
-
-		&:hover {
-			border-bottom: 1px solid $red;
-			color: $red;
-		}
+.b-nav {
+	&_link {
+		@include g-link;
 	}
 
-	&-link:not(:last-child) {
+	&_link:not(:last-child) {
 		margin-right: 20px;
 	}
 }

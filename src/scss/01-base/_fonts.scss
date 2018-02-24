@@ -1,7 +1,7 @@
 @font-face{
-	font-family: 'Lato-BlackItalic';
-	src: url('../fonts/lato-blackitalic-webfont.woff2') format('woff2'),
-		url('../fonts/lato-blackitalic-webfont.woff') format('woff');
+	font-family: 'Lato-BoldItalic';
+	src: url('../fonts/lato-bolditalic-webfont.woff2') format('woff2'),
+		url('../fonts/lato-bolditalic-webfont.woff') format('woff');
 }
 
 @font-face{
@@ -24,12 +24,24 @@
 
 @font-face{
 	font-family: 'Opensans-SemiBoldItalic';
-	src: url('../fonts/opensans-semibolditalic--webfont.woff2') format('woff2'),
-		url('../fonts/opensans-semibolditalic--webfont.woff') format('woff');
+	src: url('../fonts/opensans-semibolditalic-webfont.woff2') format('woff2'),
+		url('../fonts/opensans-semibolditalic-webfont.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'Opensans-Semibold';
-	src: url('../fonts/opensans-semibold--webfont.woff2') format('woff2'),
-		url('../fonts/opensans-semibold--webfont.woff') format('woff');
+	src: url('../fonts/opensans-semibold-webfont.woff2') format('woff2'),
+		url('../fonts/opensans-semibold-webfont.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Opensans-Bold';
+	src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+		url('../fonts/opensans-bold-webfont.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Opensans-Regular';
+	src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+		url('../fonts/opensans-regular-webfont.woff') format('woff');
 }

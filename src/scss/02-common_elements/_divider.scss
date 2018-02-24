@@ -1,0 +1,26 @@
+@mixin g-divider {
+	background-color: $red;
+	border-radius: 50%;
+	width: 7px;
+	height: 7px;
+	position: relative;
+
+	&:before,
+	&:after {
+		background: $light;
+		content: '';
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		width: 80px;
+	}
+
+	&:before {
+		left: 15px;
+	}
+
+	&:after {
+		right: 15px;
+	}
+}

@@ -17,15 +17,39 @@ $fonts: (
 	default: (
 
 		main: (
-			font-family: ('Opensans-Light', 'Arial', sans-serif),
-			font-weight: normal,
+			font-family: ('Opensans-Regular', 'Arial', sans-serif),
+			font-weight: normal
 		),
 
 		main_bold: (
-			font-family: ('Opensans-Semibold', 'Arial', sans-serif),
-			font-weight: normal,
-		)
+			font-family: ('Opensans-Bold', 'Arial', sans-serif),
+			font-weight: normal
+		),
 
+		main_semibold: (
+			font-family: ('Opensans-Semibold', 'Arial', sans-serif),
+			font-weight: normal
+		),
+
+		main_italic: (
+			font-family: ('Opensans-SemiBoldItalic', 'Arial', sans-serif),
+			font-weight: normal
+		),
+
+		secondary: (
+			font-family: ('Lato-Regular', 'Arial', sans-serif),
+			font-weight: normal
+		),
+
+		secondary_bold: (
+			font-family: ('Lato-BoldItalic', 'Arial', sans-serif),
+			font-weight: normal
+		),
+
+		secondary_italic: (
+			font-family: ('Lato-Italic', 'Arial', sans-serif),
+			font-weight: normal
+		)
 	),
 );
 

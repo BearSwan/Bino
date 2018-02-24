@@ -1,0 +1,36 @@
+@mixin g-link {
+	@include font(main, 14px);
+
+	color: $light;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.3s;
+
+	&:before {
+		border-bottom:solid 3px $white;
+		bottom: -20px;
+		content: " ";
+		display: block;
+		left: 50%;
+		margin: 0 auto;
+		position: absolute;
+		transition: all 0.3s;
+		width: 0%;
+		z-index: -1;
+	}
+
+	@include on-hover {
+		color: $red;
+
+		&:before {
+			border-bottom:solid 3px $red;
+			width:100%;
+			left:0%;
+		}
+	}
+}
+
+.g-link_regular {
+	@include g-link;
+}

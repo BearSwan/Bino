@@ -1,0 +1,16 @@
+.b-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 10;
+	padding: 20px 0;
+
+	&-content {
+		align-items: center;
+		background: transparent;
+		display: flex;
+		justify-content: space-between;
+	}
+}
