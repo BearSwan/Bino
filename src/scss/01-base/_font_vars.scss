@@ -49,6 +49,16 @@ $fonts: (
 		secondary_italic: (
 			font-family: ('Lato-Italic', 'Arial', sans-serif),
 			font-weight: normal
+		),
+
+		additional: (
+			font-family: ('Sourcesans-Regular', 'Arial', sans-serif),
+			font-weight: normal
+		),
+
+		additional_bold: (
+			font-family: ('Sourcesans-Bold', 'Arial', sans-serif),
+			font-weight: normal
 		)
 	),
 );

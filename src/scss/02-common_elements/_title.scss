@@ -1,0 +1,50 @@
+@mixin g-title(
+	$position: left,
+	$color: $red,
+	$element: after
+) {
+	@include font(additional_bold, 36px);
+
+	color: $lightbrown;
+	padding-top: 5px;
+	position: relative;
+	text-transform: uppercase;
+
+	&::#{$element} {
+		#{$position}: 0;
+		background: $red;
+		content: '';
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 7px;
+	}
+
+	@if $position == "left" {
+		padding-left: 20px;
+	} @else {
+		padding-right: 20px;
+	}
+
+	@content;
+}
+
+@mixin g-title_underlined {
+	@include font(main_semibold, 18px);
+
+	color: $lightbrown;
+	padding-bottom: 20px;
+	position: relative;
+	text-transform: uppercase;
+
+	&:before {
+		background: $brown;
+		bottom: 0;
+		content: '';
+		height: 2px;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, 0);
+		width: 40px;
+	}
+}

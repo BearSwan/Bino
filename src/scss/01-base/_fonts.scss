@@ -45,3 +45,15 @@
 	src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
 		url('../fonts/opensans-regular-webfont.woff') format('woff');
 }
+
+@font-face{
+	font-family: 'Sourcesans-Regular';
+	src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+		url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Sourcesans-Bold';
+	src: url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+		url('../fonts/sourcesanspro-bold-webfont.woff') format('woff');
+}

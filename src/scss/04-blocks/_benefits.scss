@@ -4,10 +4,56 @@
 		display: flex;
 		justify-content: space-between;
 		align-content: flex-start;
-		text-align: center;
+	}
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		& + & {
+			margin-left: 60px;
+		}
+	}
+
+	&-icon_wrapper {
+		padding: 25px;
+		border: 1px solid $lightbrown;
+		margin-bottom: 30px;
+		transition: .3s all ease-in;
+		cursor: pointer;
+	}
+
+	&-item:hover {
+		.b-benefits {
+			&-icon_wrapper {
+				transform: rotate(45deg);
+				border-color: $red;
+			}
+			&-icon {
+				transform: rotate(-45deg);
+			}
+
+			&-title {
+				color: $red;
+			}
+		}
 	}
 
 	&-icon {
 		font-size: 24px;
+		transition: .3s all ease-in;
+	}
+
+	&-title {
+		@include g-title_underlined;
+
+		margin-bottom: 20px;
+		transition: .3s all ease-in;
+	}
+
+	&-text {
+		@include font(additional, 12px, 20px);
+		text-align: center;
 	}
 }
