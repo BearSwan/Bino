@@ -1,5 +1,5 @@
 .b-benefits {
-	
+
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -30,7 +30,7 @@
 		padding: 25px;
 		border: 1px solid $lightbrown;
 		margin-bottom: 30px;
-		transition: .3s all ease-in;
+		transition: .5s all linear;
 		cursor: pointer;
 	}
 
@@ -52,14 +52,14 @@
 
 	&-icon {
 		font-size: 24px;
-		transition: .3s all ease-in;
+		transition: all .5s linear;
 	}
 
 	&-title {
 		@include g-title_underlined;
 
 		margin-bottom: 20px;
-		transition: .3s all ease-in;
+		transition: all .5s linear;
 	}
 
 	&-text {

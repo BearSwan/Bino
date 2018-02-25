@@ -1,3 +1,109 @@
 .b-works {
-	
+
+	&-info {
+		flex-basis: 50%;
+		position: relative;
+		transition: all .9 linear;
+
+		@include respond-to(tablets) {
+			flex-basis: 33.3333%;
+		}
+
+		@include respond-to(desktop) {
+			flex-basis: 25%;
+		}
+	}
+
+	&-info_inner {
+		background-color: rgba($red, .6);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		transition: all .3s linear;
+
+		@include respond-to(desktop) {
+			padding: 0 0 50px 50px;
+			opacity: 0;
+			visibility: hidden;
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+	}
+
+	&-info:hover &-info_inner {
+		@include respond-to(desktop) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&-info:hover &-info_divider {
+		@include respond-to(desktop) {
+			width: 45px;
+		}
+	}
+
+	&-info_divider {
+		width: 0;
+		border-bottom: 4px solid white;
+		height: 0;
+		margin-bottom: 30px;
+		transition: all .5s linear;
+	}
+
+	&-info_title {
+		@include font(additional_bold, 18px);
+
+		color: $white;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+
+		@include respond-to(desktop) {
+			font-size: 24px;
+		}
+	}
+
+	&-info_subtitle {
+		@include font(additional, 14px);
+
+		color: $white;
+	}
+
+	&-info_img {
+		height: 100%;
+		width: 100%;
+	}
+
+	&-tab_nav {
+		@include g-tabs;
+
+		&-item {
+			@include g-tabs(control_item);
+		}
+
+		&-label {
+			@include g-tabs(control_label);
+		}
+	}
+
+	&-tabs_container {
+		@include g-tabs(container);
+	}
+
+	&-tabs_switcher {
+		@include g-tabs(switcher);
+	}
+
+	&-tabs_content {
+		@include g-tabs(content);
+	}
+
 }
+
+//TODO: active tabs - title highlight

@@ -28,6 +28,10 @@
 	@content;
 }
 
+.g-title {
+	@include g-title;
+}
+
 @mixin g-title_underlined {
 	@include font(main_semibold, 18px);
 
@@ -45,5 +49,56 @@
 		position: absolute;
 		transform: translate(-50%, 0);
 		width: 40px;
+	}
+}
+
+.g-title_underlined {
+	@include g-title_underlined;
+}
+
+@mixin g-title_block(
+	$_: root,
+	$title_color: $lightbrown,
+	$subtitle_color: $brown
+) {
+	@if $_ == root {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@if $_ == title {
+		@include font(additional_bold, 36px);
+
+		color: $title_color;
+		text-transform: uppercase;
+	}
+
+	@if $_ == subtitle {
+		@include font(additional, 14px);
+
+		color: $subtitle_color;
+		margin: 20px 0;
+	}
+
+	@if $_ == divider {
+		@include g-divider;
+	}
+}
+
+.g-heading {
+	@include g-title_block;
+
+	&-title {
+		@include g-title_block(title);
+	}
+
+	&-subtitle {
+		@include g-title_block(subtitle);
+	}
+
+	&-divider {
+		@include g-title_block(divider);
 	}
 }

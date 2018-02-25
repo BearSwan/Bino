@@ -1,0 +1,56 @@
+@mixin g-tabs($_: 'navigation') {
+
+	@if $_ == navigation {
+		display: flex;
+		justify-content: center;
+		margin: 50px 0;
+	}
+
+	@if $_ == control_item {
+		text-transform: uppercase;
+		transform: skew(-30deg);
+		padding-right: 15px;
+		display: block;
+
+		&:not(:last-child) {
+			border-right: 1px solid $lightgrey;
+			margin-right: 15px;
+		}
+	}
+
+	@if $_ == control_label {
+		display: block;
+		transform: skew(30deg);
+		transition: all .5s;
+		color: $lightgrey;
+		cursor: pointer;
+
+		@include on-hover {
+			color: $red;
+		}
+	}
+
+	@if $_ == switcher  {
+		display: none;
+
+		&:checked ~ div {
+			max-height: 1000px;
+			opacity: 1;
+			overflow: visible;
+			transition: opacity 0.3s;
+		}
+	}
+
+	@if $_ == content {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@if $_ == container {
+
+	}
+}
