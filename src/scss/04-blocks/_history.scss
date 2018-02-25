@@ -2,6 +2,12 @@
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include respond-to(tablets phones) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
 	}
 
 	&-info {
@@ -9,9 +15,47 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
+		flex: 1;
+	}
+
+	&-image_wrapper {
+		margin-right: 60px;
+
+
+		@include respond-to(tablets phones) {
+			margin: 0 0 60px;
+		}
+	}
+
+	&-heading {
+		margin-bottom: 40px;
+
+		@include respond-to(tablets phones) {
+			margin: 0 auto 40px;
+		}
 	}
 
 	&-heading_title {
 		@include g-title;
+	}
+
+	&-text {
+		@include font(additional, 14px, 29px);
+
+		color: $lightbrown;
+
+		& + & {
+			margin-top: 40px;
+		}
+	}
+
+	&-cta {
+		@include g-button;
+
+		margin-top: 40px;
+
+		@include respond-to(tablets phones) {
+			margin: 40px auto 0;
+		}
 	}
 }

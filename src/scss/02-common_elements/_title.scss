@@ -1,6 +1,5 @@
 @mixin g-title(
 	$position: left,
-	$color: $red,
 	$element: after
 ) {
 	@include font(additional_bold, 36px);
