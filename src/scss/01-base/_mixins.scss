@@ -6,3 +6,16 @@
 		}
 	}
 }
+
+//mixin for floated blocks
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+.h-clearfix {
+	@include clearfix;
+}

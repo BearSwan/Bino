@@ -1,0 +1,82 @@
+.b-study {
+
+	&-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&-slider_wrapper {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 60%;
+		background: white;
+		box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+		padding: 50px;
+		transform: translate(0, -50%);
+	}
+
+	&-slider_content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	&-icon_wrapper {
+		background: $red;
+		transform: rotate(45deg);
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		margin: 30px 0;
+	}
+
+	&-icon {
+		color: $white;
+		transform: rotate(-45deg);
+	}
+
+	&-image_wrapper {
+		flex-basis: 50%;
+	}
+
+	&-title {
+		@include g-title_underlined;
+
+		margin-bottom: 25px;
+	}
+
+	&-text {
+		@include font(additional, 14px, 24px);
+
+		color: $lightbrown;
+		margin-bottom: 40px;
+	}
+
+	&-cta {
+		@include g-button;
+	}
+
+	//slider slick configs
+	.slick-dots {//TODO: slick hover state
+		li.slick-active button:before {
+			color: $red;
+		}
+	}
+	.slick-dots li button {
+
+		&:hover {
+			before {
+				opacity: 0.1;
+				color: green;
+				background: yellow;
+			}
+		}
+		&:before {
+			font-size: 54px;
+		}
+	}
+
+}
