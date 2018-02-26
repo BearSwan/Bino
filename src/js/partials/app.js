@@ -26,6 +26,14 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		dots: true
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+				dots: false
+				}
+			}
+		]
 	})
 });

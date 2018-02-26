@@ -1,0 +1,87 @@
+.b-ratings {
+	background-image: url('../images/ratings.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 150px 0;
+	position: relative;
+
+	@include respond-to(phones) {
+		padding: 120px 0;
+	}
+
+	&:before {
+		background: rgba($black, .4);
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&-wrapper {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		z-index: 3;
+		flex-wrap: wrap;
+
+		@include respond-to(tablets desktop) {
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+	}
+
+	&-item {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 20px 0;
+
+		@include respond-to(phones) {
+			width: 50%;
+		}
+	}
+
+	&-icon {
+		color: $white;
+		font-size: 32px;
+		transition: all .5s linear;
+	}
+
+	&-icon_wrapper {
+		border-radius: 50%;
+		border: 1px solid $white;
+		padding: 40px;
+		transition: all .5s linear;
+
+		@include on-hover {
+			background-color: rgba($light, .9);
+			border-color: $black;
+
+			.b-ratings-icon {
+				color: $black;
+			}
+		}
+	}
+
+	&-info {
+		color: $white;
+		margin-top: 50px;
+
+		@include respond-to(phones) {
+			margin-top: 20px;
+		}
+	}
+
+	&-count {
+		@include font(additional_bold, 30px);
+	}
+
+	&-text {
+		@include font(additional, 18px);
+	}
+}
