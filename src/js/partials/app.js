@@ -37,3 +37,5 @@ $(document).ready(function(){
 		]
 	})
 });
+
+//TODO: background move on mouseover
