@@ -7,6 +7,7 @@
 	background-image: url('../images/ratings.png');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 
 	@include respond-to(phones) {
 		padding: 120px 0;

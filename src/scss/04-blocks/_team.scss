@@ -1,0 +1,198 @@
+.b-team {
+	background-image: url(../images/team.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	min-height: 500px;
+	padding: 100px 0;
+	background-attachment: fixed;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, .3);
+		z-index: 1;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/team-mask.png);
+		background-position: bottom;
+		background-size: 100% 40%;
+		background-repeat: no-repeat;
+		z-index: 1;
+
+		@include respond-to(tablets phones) {
+			content: none;
+		}
+	}
+
+	&-wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-heading {
+		position: relative;
+
+		.g-heading-title,
+		.g-heading-subtitle {
+			color: $white;
+		}
+	}
+
+	&-wrapper,
+	&-heading {
+		z-index: 3;
+	}
+
+	&-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include respond-to(phones) {
+			flex-direction: column;
+		}
+	}
+
+	&-img_wrapper {
+		border: 3px solid $red;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+
+		@include respond-to(phones) {
+			width: 80px;
+			height: 80px;
+		}
+
+		@include on-hover {
+			&:after {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&:before {
+				bottom: -80px;
+				height: 50px;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			+ .b-team-info {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		//mask for image on hover
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($red, .5);
+			border-radius: 50%;
+			transition: all .5s;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		//divider line on hover
+		&:before {
+			content: '';
+			background: $white;
+			bottom: 0;
+			height: 0;
+			left: 50%;
+			position: absolute;
+			transform: translate(0, -50%);
+			transition: all .5s;
+			width: 2px;
+			z-index: -1;
+
+			@include respond-to(tablets) {
+				bottom: -80px;
+				height: 50px;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			@include respond-to(phones) {
+				content: none;
+			}
+		}
+	}
+
+	&-item {
+		@include respond-to(phones) {
+			& + & {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&-item_link {
+		align-items: center;
+		cursor: initial;
+		display: flex;
+		flex-direction: column;
+
+		@include respond-to(phones) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+
+	&-info {
+		margin: 0 0 0 20px;
+		transition: all .5s linear;
+		text-align: center;
+
+		@include respond-to(tablets desktop) {
+			margin-top: 80px;
+		}
+
+		@include respond-to(desktop) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&-info_name {
+		@include font(main_semibold, 24px);
+
+		color: $red;
+	}
+
+	&-info_position {
+		@include font(additional);
+
+		color: $light;
+	}
+}
