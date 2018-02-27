@@ -1,4 +1,4 @@
-@mixin g-button {
+@mixin g-button($disabled: initial) {
 
 	@include font(main_bold, 14px);
 
@@ -13,6 +13,16 @@
 	width: 225px;
 	text-align: center;
 	transition: background-color 0.5s ease, border-color 0.5s ease;
+
+	@if $disabled == disabled {
+		background-color: $lightgrey;
+		border: 0;
+
+		@include on-hover { //FIXME: hover on disabled button
+			background-color: yellow;
+		}
+	}
+
 	@content;
 
 	@include respond-to(tablets phones) {

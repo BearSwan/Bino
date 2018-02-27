@@ -2,17 +2,11 @@
 
 	padding: 150px 20px;
 	position: relative;
-
-	&-inner {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url('../images/ratings.png');
-		background-repeat: no-repeat;
-		//background-size: contain;
-	}
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/ratings.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	@include respond-to(phones) {
 		padding: 120px 0;
