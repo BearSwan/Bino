@@ -1,4 +1,4 @@
-@mixin g-divider {
+@mixin g-divider($type: light) {
 	background-color: $red;
 	border-radius: 50%;
 	width: 7px;
@@ -7,7 +7,7 @@
 
 	&:before,
 	&:after {
-		background: $light;
+
 		content: '';
 		height: 1px;
 		position: absolute;
@@ -23,4 +23,17 @@
 	&:after {
 		right: 15px;
 	}
+
+	@if($type == light) {
+		&:before,
+		&:after {
+			background: $light;
+		}
+	} @else if($type == dark) {
+		&:before,
+		&:after {
+			background: $lightgrey;
+		}
+	}
+
 }

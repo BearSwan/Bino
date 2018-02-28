@@ -80,10 +80,30 @@
 
 		color: $subtitle_color;
 		margin: 20px 0;
+		text-align: center;
+		max-width: 600px;
 	}
 
 	@if $_ == divider {
 		@include g-divider;
+	}
+}
+
+//TODO: create new states for divider and title and to implement them for sections(not for all g-heading)
+
+.g-heading {
+	@include g-title_block;
+
+	&-title {
+		@include g-title_block(title);
+	}
+
+	&-subtitle {
+		@include g-title_block(subtitle);
+	}
+
+	&-divider {
+		@include g-title_block(divider);
 	}
 }
 
