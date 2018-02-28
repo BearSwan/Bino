@@ -31,6 +31,37 @@
 	}
 }
 
+@mixin g-link_type2($_: root) {
+
+		@if $_ == root {
+			@include font(main_italic, 18, 24px);
+
+			position: relative;
+			width: 100px;
+			cursor: pointer;
+		}
+
+		@if $_ == link {
+			color: $white;
+			text-transform: uppercase;
+			position: relative;
+		}
+
+		@if $_ == link_hovered {
+			right: 0;
+		}
+
+		@if $_ == icon {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			right: 5px;
+			color: $white;
+			font-size: 10px;
+			transition: all .3s linear;
+		}
+	}
+
 .g-link_regular {
 	@include g-link;
 }
