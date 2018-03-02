@@ -1,0 +1,67 @@
+.b-contact {
+	display: flex;
+	justify-content: space-between;
+
+	@include respond-to(phones) {
+		flex-direction: column;
+	}
+
+	&-info,
+	&-form_wrapper {
+		box-shadow: 0px 3px 5px 0px rgba($black, 0.1);
+		padding: 90px;
+
+		@include respond-to(tablets) {
+			padding: 50px 20px;
+		}
+	}
+
+	&-info {
+		flex-basis: 40%;
+		margin-right: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@include respond-to(tablets) {
+			justify-content: space-around;
+		}
+
+		@include respond-to(phones) {
+			flex-basis: 100%;
+			margin: 0 0 50px 0;
+		}
+	}
+
+	&-info_item {
+		& + & {
+			margin-top: 20px;
+
+			@include respond-to(desktop) {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	&-info_title {
+		@include font(secondary_semibold, 24px);
+
+		color: $red;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&-info_text {
+		@include font(secondary, 18px);
+
+		color: $lightgrey;
+	}
+
+	&-form_wrapper {
+		flex-basis: 60%;
+
+		@include respond-to(phones) {
+			flex-basis: 100%;
+		}
+	}
+} //TODO: set background for l--contact

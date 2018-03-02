@@ -1,11 +1,7 @@
 .b-partners {
-	background-color: $light;
-
-	&-wrapper {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
 	&-item {
 		flex-basis: calc(20% - 15px);
@@ -19,4 +15,4 @@
 		width: 100%;
 		min-width: 80px;
 	}
-}
+} //TODO: set background color for l-partners

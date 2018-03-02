@@ -1,5 +1,4 @@
 .b-ratings {
-
 	padding: 150px 20px;
 	position: relative;
 	width: 100%;
@@ -82,10 +81,10 @@
 	}
 
 	&-count {
-		@include font(additional_bold, 30px);
+		@include font(secondary_bold, 30px);
 	}
 
 	&-text {
-		@include font(additional, 18px);
+		@include font(secondary, 18px);
 	}
 }

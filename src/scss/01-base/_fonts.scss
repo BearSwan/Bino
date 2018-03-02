@@ -1,22 +1,4 @@
 @font-face{
-	font-family: 'Lato-BoldItalic';
-	src: url('../fonts/lato-bolditalic-webfont.woff2') format('woff2'),
-		url('../fonts/lato-bolditalic-webfont.woff') format('woff');
-}
-
-@font-face{
-	font-family: 'Lato-Italic';
-	src: url('../fonts/lato-italic-webfont.woff2') format('woff2'),
-		url('../fonts/lato-italic-webfont.woff') format('woff');
-}
-
-@font-face{
-	font-family: 'Lato-Regular';
-	src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
-		url('../fonts/lato-regular-webfont.woff') format('woff');
-}
-
-@font-face{
 	font-family: 'Opensans-Light';
 	src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
 		url('../fonts/opensans-light-webfont.woff') format('woff');
@@ -56,4 +38,10 @@
 	font-family: 'Sourcesans-Bold';
 	src: url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
 		url('../fonts/sourcesanspro-bold-webfont.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'Sourcesans-SemiBold';
+	src: url('../fonts/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+		url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff');
 }

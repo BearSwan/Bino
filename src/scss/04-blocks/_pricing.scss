@@ -1,19 +1,17 @@
 .b-pricing {
-	&-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 40px;
 
-		@include respond-to(tablets) {
-			flex-wrap: wrap;
-			flex-direction: row;
-		}
+	@include respond-to(tablets) {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
 
-		@include respond-to(desktop) {
-			flex-direction: row;
-			margin-top: 60px;
-		}
+	@include respond-to(desktop) {
+		flex-direction: row;
+		margin-top: 60px;
 	}
 
 	&-item {
@@ -78,11 +76,11 @@
 	}
 
 	&-price {
-		@include font(additional_bold, 40px);
+		@include font(secondary_bold, 40px);
 	}
 
 	&-price_subtitle {
-		@include font(additional);
+		@include font(secondary);
 	}
 
 	&-item_bottom {

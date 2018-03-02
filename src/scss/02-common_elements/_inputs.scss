@@ -1,0 +1,110 @@
+.f-input {
+	& + & {
+		margin-top: 30px;
+	}
+
+	&-wrapper {
+		display: block;
+		position: relative;
+	}
+
+	&-text {
+		border-color: transparent;
+		padding: 10px 0;
+		width: 100%;
+		border-bottom: 1px solid $lightgrey;
+		transition: all .4s linear;
+	}
+
+	&-text_border {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(0, -50%);
+		width: 0;
+		height: 2px;
+		background-color: $red;
+		transition: all .4s;
+	}
+
+	&-text:focus {
+		outline: none;
+		border-bottom-color: transparent;
+	}
+
+	&-text:focus ~ &-text_label,
+	&-text:valid ~ &-text_label {
+		top: 0;
+	}
+
+	&-text:focus ~ &-text_border {
+		left: 0;
+		width: 100%;
+	}
+
+	&-text_label {
+		color: $lightgrey;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+		transition: top .2s linear;
+	}
+}
+
+.f-textarea {
+	display: block;
+	position: relative;
+	margin-top: 30px;
+
+	&-text {
+		border-color: transparent;
+		padding: 10px 0;
+		width: 100%;
+		border-bottom: 1px solid $lightgrey;
+		transition: all .3s linear;
+		position: relative;
+		resize:vertical;
+		min-height: 100px;
+	}
+
+	&-text:focus {
+		outline: none;
+		border-bottom-color: transparent;
+	}
+
+	&-text:focus ~ &-text_label,
+	&-text:valid ~ &-text_label {
+		top: -20px;
+	}
+
+	&-text:focus ~ &-text_border {
+		left: 0;
+		width: 100%;
+	}
+
+	&-text_label {
+		color: $lightgrey;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: top .2s linear;
+	}
+
+	&-text_border {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(0, -50%);
+		width: 0;
+		height: 2px;
+		background-color: $red;
+		transition: all .4s;
+	}
+}//TODO:  label don't back when some text is entered
+
+.f-button {
+	@include g-button;
+
+	margin-top: 30px;
+}

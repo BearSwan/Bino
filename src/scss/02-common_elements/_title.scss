@@ -2,7 +2,7 @@
 	$position: left,
 	$element: after
 ) {
-	@include font(additional_bold, 36px);
+	@include font(secondary_bold, 36px);
 
 	color: $lightbrown;
 	padding-top: 5px;
@@ -69,14 +69,14 @@
 	}
 
 	@if $_ == title {
-		@include font(additional_bold, 36px);
+		@include font(secondary_bold, 36px);
 
 		color: $title_color;
 		text-transform: uppercase;
 	}
 
 	@if $_ == subtitle {
-		@include font(additional, 14px);
+		@include font(secondary, 14px);
 
 		color: $subtitle_color;
 		margin: 20px 0;
@@ -119,7 +119,7 @@
 	}
 
 	@if $_ == title {
-		@include font(additional_bold, 18px);
+		@include font(secondary_semibold, 18px);
 
 		color: $white;
 		text-transform: uppercase;
@@ -130,8 +130,8 @@
 		}
 	}
 
-	@if &_ == subtitle {
-		@include font(additional, 14px);
+	@if $_ == subtitle {
+		@include font(secondary, 14px);
 
 		color: $white;
 	}

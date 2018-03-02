@@ -191,7 +191,7 @@
 	}
 
 	&-info_position {
-		@include font(additional);
+		@include font(secondary);
 
 		color: $light;
 	}

@@ -106,7 +106,7 @@
 	}
 
 	&-slide_subtitle {
-		@include font(additional, 18px);
+		@include font(secondary, 18px);
 
 		text-transform: capitalize;
 		margin-bottom: 20px;

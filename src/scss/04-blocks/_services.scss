@@ -1,6 +1,6 @@
 .b-services {
 	display: flex;
-	
+
 	align-items: center;
 	background: {
 		color: $lightblack;
@@ -91,7 +91,7 @@
 	}
 
 	&-text {
-		@include font(additional, 14px, 29px);
+		@include font(secondary, 14px, 29px);
 
 		color: $lightbrown;
 	}
@@ -100,7 +100,7 @@
 	.slick-dotted.slick-slider { // to fix {
 		margin-bottom: 0;
 	}
-	
+
 	.slick-dots {
 		display: flex;
 		flex-direction: column;

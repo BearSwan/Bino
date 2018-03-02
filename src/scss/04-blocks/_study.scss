@@ -1,12 +1,8 @@
 .b-study {
-	background-color: $light;
-
-	&-wrapper {
-		position: relative;
-		display: flex;
-		justify-content: flex-end;
-		margin-top: 50px;
-	}
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 50px;
 
 	&-slider_wrapper {
 		position: absolute;
@@ -71,7 +67,7 @@
 	}
 
 	&-text {
-		@include font(additional, 14px, 24px);
+		@include font(secondary, 14px, 24px);
 
 		color: $lightbrown;
 		margin-bottom: 30px;
@@ -93,4 +89,4 @@
 			font-size: 54px;
 		}
 	}
-}
+} //TODO: set background color fot l-study
