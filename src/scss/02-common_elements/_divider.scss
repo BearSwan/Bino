@@ -37,3 +37,18 @@
 	}
 
 }
+
+@mixin g-divider_type2($_: root) {
+
+	@if $_ == root {
+		width: 0;
+		border-bottom: 4px solid white;
+		height: 0;
+		margin-bottom: 30px;
+		transition: all .5s linear;
+	}
+
+	@if $_ == link_hovered {
+		width: 45px;
+	}
+}

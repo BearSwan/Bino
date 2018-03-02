@@ -9,37 +9,105 @@
 	&-item {
 		flex-basis: 50%;
 		display: flex;
-	}
 
-	&-item.m-reverse {
-		flex-direction: row-reverse;
-	}
+		@include respond-to(tablets phones) {
+			flex-basis: 100%;
+		}
 
-	&-item.m-reverse &-info {
-		&:before {
-			left: 100%;
-			border-width: 35px 0 35px 27px;
-			border-color: transparent transparent transparent $red;
+		@include respond-to(phones) {
+			flex-direction: column;
+		}
+
+		//TEST
+		@include respond-to(desktop) {
+			position: relative;
 		}
 	}
 
-	&-image_wrapper {
+	&-item:nth-child(1) {
+		@include respond-to(tablets) {
+			order: 1;
+		}
+	}
+
+	&-item:nth-child(2) {
+		@include respond-to(tablets) {
+			order: 3;
+		}
+	}
+
+	&-item:nth-child(3) {
+		@include respond-to(tablets) {
+			order: 2;
+		}
+	}
+
+	&-item:nth-child(4) {
+		@include respond-to(tablets) {
+			order: 4;
+		}
+	}
+
+	&-item.m-reverse {
+		@include respond-to(desktop tablets) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&-item.m-reverse &-info {
+		@include respond-to(desktop tablets) {
+			&:before {
+				left: 100%;
+				border-width: 35px 0 35px 27px;
+				border-color: transparent transparent transparent $red;
+			}
+		}
+	}
+
+	&-image_wrapper,
+	&-info {
 		flex-basis: 50%;
+
+		@include respond-to(phones) {
+			flex-basis: 100%;
+		}
+	}
+
+	&-image {
+		filter: blur(1px);
+	}
+
+	&-image_wrapper {
+		overflow: hidden;
+	}
+
+	&-item.m-reverse &-image_wrapper:hover &-image {
+		@include on-hover {
+			transform: scale(1.05) translateX(-2%);
+		}
+	}
+
+	&-image_wrapper:hover &-image {
+		@include on-hover {
+			transform: scale(1.05) translateX(2%);
+			filter: blur(0);
+		}
 	}
 
 	&-image {
 		width: 100%;
 		height: 100%;
+		transition: all .5s linear;
 	}
 
 	&-info{
-		flex-basis: 50%;
 		background: $red;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 50px 20px;
 		position: relative;
+		transition: all .5s linear;
 
 		&:before {
 			content: '';
@@ -51,22 +119,42 @@
 			border-width: 35px 27px 35px 0;
 			border-color: transparent $red transparent transparent;
 		}
+
+		@include respond-to(phones) {
+			text-align: center;
+
+			&:before {
+				top: -30px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				border-width: 0 35px 30px 35px;
+				border-color: transparent transparent $red transparent;
+			}
+		}
 	}
 
 	&-info_heading {
-		color: $white;
-	}
-
-	&-subtitle {
-		@include font(additional);
+		@include g-title_block_type2
 	}
 
 	&-title {
-		@include font(additional_bold, 22px);
+		@include g-title_block_type2(title);
 
-		text-transform: uppercase;
-		margin-top: 30px;
+		margin-top: 15px;
 	}
+
+	&-subtitle {
+		@include g-title_block_type2(subtitle);
+	}
+
+	&-divider {
+		@include g-title_block_type2(divider);
+	}
+
+	&-info:hover &-divider {
+		@include g-divider_type2(link_hovered);
+	}
+
 
 	&-text {
 		@include font(additional, 16px, 30px);

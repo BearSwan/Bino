@@ -1,4 +1,4 @@
-.b-works {
+.b-works { //TODO: fix for tablets/phones
 
 	&-info {
 		flex-basis: 50%;
@@ -16,8 +16,6 @@
 
 	&-info_inner {
 		background-color: rgba($red, .6);
-		display: flex;
-		flex-direction: column;
 		height: 100%;
 		justify-content: center;
 		align-items: center;
@@ -26,6 +24,8 @@
 		top: 0;
 		width: 100%;
 		transition: all .3s linear;
+
+		@include g-title_block_type2;
 
 		@include respond-to(desktop) {
 			padding: 0 0 50px 50px;
@@ -44,35 +44,19 @@
 	}
 
 	&-info:hover &-info_divider {
-		@include respond-to(desktop) {
-			width: 45px;
-		}
+		@include g-divider_type2(link_hovered);
 	}
 
 	&-info_divider {
-		width: 0;
-		border-bottom: 4px solid white;
-		height: 0;
-		margin-bottom: 30px;
-		transition: all .5s linear;
+		@include  g-title_block_type2(divider);
 	}
 
 	&-info_title {
-		@include font(additional_bold, 18px);
-
-		color: $white;
-		text-transform: uppercase;
-		margin-bottom: 15px;
-
-		@include respond-to(desktop) {
-			font-size: 24px;
-		}
+		@include  g-title_block_type2(title);
 	}
 
 	&-info_subtitle {
-		@include font(additional, 14px);
-
-		color: $white;
+		@include  g-title_block_type2(subtitle);
 	}
 
 	&-info_img {

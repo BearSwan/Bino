@@ -39,6 +39,10 @@
 			position: relative;
 			width: 100px;
 			cursor: pointer;
+
+			@include respond-to(phones) {
+				margin: 0 auto;
+			}
 		}
 
 		@if $_ == link {
@@ -48,17 +52,23 @@
 		}
 
 		@if $_ == link_hovered {
-			right: 0;
+			//@include on-hover {
+				right: 0;
+			//} //FIXME: why not working?
 		}
 
 		@if $_ == icon {
 			position: absolute;
 			top: 50%;
 			transform: translate(0, -50%);
-			right: 5px;
+			right: 3px;
 			color: $white;
 			font-size: 10px;
 			transition: all .3s linear;
+
+			@include respond-to(phones) {
+				right: -3px;
+			}
 		}
 	}
 

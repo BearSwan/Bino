@@ -107,18 +107,32 @@
 	}
 }
 
-.g-heading {
-	@include g-title_block;
-
-	&-title {
-		@include g-title_block(title);
+//
+@mixin g-title_block_type2($_: root) {
+	@if $_ == root {
+		display: flex;
+		flex-direction: column;
 	}
 
-	&-subtitle {
-		@include g-title_block(subtitle);
+	@if $_ == divider {
+		@include g-divider_type2;
 	}
 
-	&-divider {
-		@include g-title_block(divider);
+	@if $_ == title {
+		@include font(additional_bold, 18px);
+
+		color: $white;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+
+		@include respond-to(desktop) {
+			font-size: 24px;
+		}
+	}
+
+	@if &_ == subtitle {
+		@include font(additional, 14px);
+
+		color: $white;
 	}
 }
