@@ -1,0 +1,48 @@
+.b-footer {
+	background-color: $footer_color;
+	padding: 30px 0;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-social_link {
+		color: $lightgrey;
+		font-size: 20px;
+
+		& + & {
+			margin-left: 20px;
+		}
+	}
+
+	&-social_link.m-fb {
+		@include on-hover {
+			color: $fb_color;
+		}
+	}
+
+	&-social_link.m-instagram {
+		@include on-hover {
+			color: $instagram_color;
+		}
+	}
+
+	&-social_link.m-twitter {
+		@include on-hover {
+			color: $twitter_color;
+		}
+	}
+
+	&-social_link.m-skype {
+		@include on-hover {
+			color: $skype_color;
+		}
+	}
+
+	&-copy_text {
+		@include font(secondary);
+
+		color: $lightgrey;
+	}
+}

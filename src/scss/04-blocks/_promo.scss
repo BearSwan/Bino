@@ -1,0 +1,44 @@
+.b-promo {
+	background-image: url('../images/promo.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 480px;
+
+	&-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	&-item {
+		text-align: center;
+	}
+
+	&-title {
+		@include font(secondary, 36px);
+
+		color: $white;
+	}
+
+	&-title_free {
+		@include font(secondary_bold, 36px);
+	}
+
+	&-subtitle {
+		@include font(secondary, 18px);
+
+		color: $white;
+		margin-top: 20px;
+	}
+
+	&-cta {
+		@include g-button;
+
+		display: block;
+		margin:  50px auto 0;
+	}
+}
+
+//TODO: includ MASK after creating mixin
