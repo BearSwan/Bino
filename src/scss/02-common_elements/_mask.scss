@@ -1,3 +1,15 @@
-@mixin g-mask($color: black) {
-	//TODO: mask mixin create
+@mixin g-mask($element: after, $color: black, $opacity: .7) {
+	position: relative;
+	z-index: 2;
+
+	&::#{$element} {
+		background: rgba($color, $opacity);
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 0;
+	}
 }

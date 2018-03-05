@@ -1,0 +1,9 @@
+.l-partners {
+	padding: 130px 0;
+	background-color: $light;
+	border-bottom: 1px solid $lightgrey;
+
+	@include respond-to(phones tablets) {
+		padding: 60px 0;
+	}
+}

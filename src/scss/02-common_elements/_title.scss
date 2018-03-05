@@ -1,3 +1,4 @@
+// main title mixin for sections (our history, our services)
 @mixin g-title(
 	$position: left,
 	$element: after
@@ -32,6 +33,7 @@
 	@include g-title;
 }
 
+//simple underlined title (sleek design in "benefits" block)
 @mixin g-title_underlined {
 	@include font(main_semibold, 18px);
 
@@ -49,6 +51,7 @@
 		position: absolute;
 		transform: translate(-50%, 0);
 		width: 40px;
+		transition: all .5s ease-in-out;
 	}
 }
 
@@ -56,6 +59,7 @@
 	@include g-title_underlined;
 }
 
+//main title block (recent works, case study....)
 @mixin g-title_block(
 	$_: root,
 	$title_color: $lightbrown,
@@ -89,8 +93,6 @@
 	}
 }
 
-//TODO: create new states for divider and title and to implement them for sections(not for all g-heading)
-
 .g-heading {
 	@include g-title_block;
 
@@ -107,7 +109,20 @@
 	}
 }
 
-//
+//same heading but with text color white;
+.g-heading {
+	&.m-white &-title,
+	&.m-white &-subtitle {
+		color: $white;
+	}
+
+	&.m-white &-divider:after,
+	&.m-white &-divider:before {
+		color: $white;
+	}
+}
+
+// secondary title block (recent works, our blog)
 @mixin g-title_block_type2($_: root) {
 	@if $_ == root {
 		display: flex;

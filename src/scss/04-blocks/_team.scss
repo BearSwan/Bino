@@ -1,22 +1,16 @@
 .b-team {
+	@include g-mask($opacity: .3);
+
 	background-image: url(../images/team.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
-	position: relative;
 	min-height: 500px;
-	padding: 100px 0;
+	padding: 130px 0;
 	background-attachment: fixed;
 
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($black, .3);
-		z-index: 1;
+	@include respond-to(tablets phones) {
+		padding: 60px 0;
 	}
 
 	&:before {
@@ -46,11 +40,6 @@
 
 	&-heading {
 		position: relative;
-
-		.g-heading-title,
-		.g-heading-subtitle {
-			color: $white;
-		}
 	}
 
 	&-wrapper,

@@ -1,4 +1,4 @@
-@mixin g-divider($type: light) {
+@mixin g-divider {
 	background-color: $red;
 	border-radius: 50%;
 	width: 7px;
@@ -7,7 +7,7 @@
 
 	&:before,
 	&:after {
-
+		background: $lightgrey;
 		content: '';
 		height: 1px;
 		position: absolute;
@@ -23,32 +23,21 @@
 	&:after {
 		right: 15px;
 	}
-
-	@if($type == light) {
-		&:before,
-		&:after {
-			background: $light;
-		}
-	} @else if($type == dark) {
-		&:before,
-		&:after {
-			background: $lightgrey;
-		}
-	}
-
 }
 
 @mixin g-divider_type2($_: root) {
 
 	@if $_ == root {
 		width: 0;
-		border-bottom: 4px solid white;
+		border-bottom: 4px solid $white;
 		height: 0;
 		margin-bottom: 30px;
 		transition: all .5s linear;
 	}
 
-	@if $_ == link_hovered {
-		width: 45px;
+	@if $_ == divider_hovered {
+		@include respond-to(desktop) {
+			width: 45px;
+		}
 	}
 }

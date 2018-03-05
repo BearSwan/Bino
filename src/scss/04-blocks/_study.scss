@@ -78,7 +78,7 @@
 	}
 
 	&-cta {
-		@include g-button;
+		@include g-button(type2);
 	}
 
 	//slider slick configs

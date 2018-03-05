@@ -1,6 +1,7 @@
 .b-ratings {
-	padding: 150px 20px;
-	position: relative;
+	@include g-mask($opacity: .4);
+
+	padding: 130px 0;
 	width: 100%;
 	height: 100%;
 	background-image: url('../images/ratings.png');
@@ -10,17 +11,6 @@
 
 	@include respond-to(phones) {
 		padding: 120px 0;
-	}
-
-	&:before {
-		background: rgba($black, .4);
-		content: '';
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 1;
 	}
 
 	&-wrapper {

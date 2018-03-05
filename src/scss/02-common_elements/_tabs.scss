@@ -4,6 +4,11 @@
 		display: flex;
 		justify-content: center;
 		margin: 50px 0;
+
+		@include respond-to(phones) {
+			flex-wrap: wrap;
+			margin: 20px 0;
+		}
 	}
 
 	@if $_ == control_item {
@@ -12,9 +17,17 @@
 		padding-right: 15px;
 		display: block;
 
+		@include respond-to(phones) {
+			padding: 0 15px 0 0;
+			margin: 10px 10px 0 0;
+		}
+
 		&:not(:last-child) {
 			border-right: 1px solid $lightgrey;
-			margin-right: 15px;
+
+			@include respond-to(desktop tablets) {
+				margin-right: 15px;
+			}
 		}
 	}
 

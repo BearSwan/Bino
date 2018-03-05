@@ -48,7 +48,7 @@
 	}
 
 	&-cta {
-		@include g-button;
+		@include g-button(type2);
 
 		margin-top: 40px;
 

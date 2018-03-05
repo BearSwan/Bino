@@ -140,7 +140,7 @@
 	}
 
 	&-info:hover &-divider {
-		@include g-divider_type2(link_hovered);
+		@include g-divider_type2(divider_hovered);
 	}
 
 

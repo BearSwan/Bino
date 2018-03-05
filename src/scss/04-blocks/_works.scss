@@ -1,4 +1,4 @@
-.b-works { //TODO: fix for tablets/phones
+.b-works {
 
 	&-info {
 		flex-basis: 50%;
@@ -44,7 +44,7 @@
 	}
 
 	&-info:hover &-info_divider {
-		@include g-divider_type2(link_hovered);
+		@include g-divider_type2(divider_hovered);
 	}
 
 	&-info_divider {

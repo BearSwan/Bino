@@ -1,0 +1,7 @@
+.l-history {
+	padding: 100px 0;
+
+	@include respond-to(phones tablets) {
+		padding: 50px 0;
+	}
+}

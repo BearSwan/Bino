@@ -1,0 +1,8 @@
+.l-contact {
+	padding: 130px 0;
+	background-color: $light;
+
+	@include respond-to(phones tablets) {
+		padding: 60px 0;
+	}
+}

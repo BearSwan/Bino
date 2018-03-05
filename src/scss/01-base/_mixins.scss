@@ -1,6 +1,6 @@
 //mixin for hover presents only on destop
 @mixin on-hover {
-	@include respond-to (desktop) {
+	@include respond-to(desktop) {
 		&:hover {
 			@content;
 		}

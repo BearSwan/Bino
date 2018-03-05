@@ -31,47 +31,47 @@
 	}
 }
 
+.g-link_regular {
+	@include g-link;
+}
+
 @mixin g-link_type2($_: root) {
 
-		@if $_ == root {
-			@include font(main_italic, 18, 24px);
+	@if $_ == root {
+		@include font(main_italic, 18, 24px);
 
-			position: relative;
-			width: 100px;
-			cursor: pointer;
+		position: relative;
+		width: 100px;
+		cursor: pointer;
 
-			@include respond-to(phones) {
-				margin: 0 auto;
-			}
-		}
-
-		@if $_ == link {
-			color: $white;
-			text-transform: uppercase;
-			position: relative;
-		}
-
-		@if $_ == link_hovered {
-			//@include on-hover {
-				right: 0;
-			//} //FIXME: why not working?
-		}
-
-		@if $_ == icon {
-			position: absolute;
-			top: 50%;
-			transform: translate(0, -50%);
-			right: 3px;
-			color: $white;
-			font-size: 10px;
-			transition: all .3s linear;
-
-			@include respond-to(phones) {
-				right: -3px;
-			}
+		@include respond-to(phones) {
+			margin: 0 auto;
 		}
 	}
 
-.g-link_regular {
-	@include g-link;
+	@if $_ == link {
+		color: $white;
+		text-transform: uppercase;
+		position: relative;
+	}
+
+	@if $_ == link_hovered {
+		@include respond-to(desktop) {
+			right: 0;
+		}
+	}
+
+	@if $_ == icon {
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		right: 3px;
+		color: $white;
+		font-size: 10px;
+		transition: all .3s linear;
+
+		@include respond-to(phones) {
+			right: -3px;
+		}
+	}
 }

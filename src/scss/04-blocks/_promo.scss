@@ -1,4 +1,6 @@
 .b-promo {
+	@include g-mask;
+
 	background-image: url('../images/promo.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -10,6 +12,8 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		z-index: 1;
+		position: relative;
 	}
 
 	&-item {
@@ -40,5 +44,3 @@
 		margin:  50px auto 0;
 	}
 }
-
-//TODO: includ MASK after creating mixin

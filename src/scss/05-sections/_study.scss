@@ -1,0 +1,8 @@
+.l-study {
+	padding: 0 0 130px 0;
+	background-color: $light;
+
+	@include respond-to(phones tablets) {
+		padding: 0 0 60px 0;
+	}
+}

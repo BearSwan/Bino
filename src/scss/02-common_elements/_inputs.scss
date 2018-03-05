@@ -101,10 +101,13 @@
 		background-color: $red;
 		transition: all .4s;
 	}
-}//TODO:  label don't back when some text is entered
+}
 
 .f-button {
-	@include g-button;
+	@include g-button(type2);
+
+	border: 0;
+	background: transparent;
 
 	margin-top: 30px;
 }

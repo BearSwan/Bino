@@ -2,6 +2,7 @@
 	display: flex;
 
 	align-items: center;
+	padding: 130px 0;
 	background: {
 		color: $lightblack;
 		image: url('../images/services.png');
@@ -15,12 +16,15 @@
 		background-size: 100% 100%;
 	}
 
+	@include respond-to(tablets) {
+		padding: 60px 0;
+	}
+
 	@include respond-to(desktop) {
-		height: 100vh;
+		min-height: 100vh;
 	}
 
 	&-heading {
-		text-align: center;
 		margin: 0 0 30px 0;
 
 		@include respond-to(desktop) {

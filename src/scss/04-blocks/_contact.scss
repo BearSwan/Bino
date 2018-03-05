@@ -1,6 +1,7 @@
 .b-contact {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 50px;
 
 	@include respond-to(phones) {
 		flex-direction: column;
@@ -10,6 +11,7 @@
 	&-form_wrapper {
 		box-shadow: 0px 3px 5px 0px rgba($black, 0.1);
 		padding: 90px;
+		background: $white;
 
 		@include respond-to(tablets) {
 			padding: 50px 20px;
