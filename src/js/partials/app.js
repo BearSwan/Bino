@@ -1,7 +1,10 @@
 $(document).ready(function(){
-	$('.js-hero_slider').slick({
-		nextArrow: '.b-hero-slider_next',
-		prevArrow: '.b-hero-slider_prev'
+	$(window).scroll(function(){
+		var sticky = $('.b-header'),
+			scroll = $(window).scrollTop();
+
+		if (scroll >= $(window).height()) sticky.addClass('m-sticky');
+		else sticky.removeClass('m-sticky');
 	});
 
 	$('.js-services_slider').slick({
@@ -35,7 +38,14 @@ $(document).ready(function(){
 				}
 			}
 		]
-	})
-});
+	});
 
-//TODO: background move on mouseover
+	//simple parallax effect on mouse move
+ 	$('.b-team').mousemove(function(e){
+		var pageX;
+		var pageY;
+		var amountMovedX = (e.pageX * -1 / 10);
+		var amountMovedY = (e.pageY * -1 / 10);
+		$(this).css('background-position',amountMovedX+'px '+amountMovedY+'px');
+	});
+});

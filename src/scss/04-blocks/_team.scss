@@ -2,8 +2,9 @@
 	@include g-mask($opacity: .3);
 
 	background-image: url(../images/team.png);
-	background-repeat: no-repeat;
+	//background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center center;
 	height: 100vh;
 	min-height: 500px;
 	padding: 130px 0;

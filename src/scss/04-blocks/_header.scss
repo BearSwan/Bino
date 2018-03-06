@@ -1,16 +1,24 @@
 .b-header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
 	background: transparent;
+	left: 0;
+	max-height: 100px;
+	padding: 10px 0;
+	position: fixed;
+	top: -100px;
+	transition: all .3s linear;
+	width: 100%;
 	z-index: 10;
-	padding: 20px 0;
 
 	&-content {
 		align-items: center;
 		background: transparent;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	&.m-sticky {
+		opacity: 1;
+		top: 0;
+		background: rgba($black, .5);
 	}
 }
