@@ -7,6 +7,14 @@ $(document).ready(function(){
 		else sticky.removeClass('m-sticky');
 	});
 
+	/*anchors*/
+	$('a[href^="#"]').click(function () {
+		var el = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(el).offset().top
+		}, 700);
+	});
+
 	$('.js-services_slider').slick({
 		dots: true,
 		arrows: false,
